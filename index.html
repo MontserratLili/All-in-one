@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Mobile First-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La garnachería</title>
+    <!--Conexión con framework Bootstrap-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--Conexión con Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+    <!--Conexión con estilos propios-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--Insertar Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/descarga.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navBarPersonalizada navbar-fixed-top">
+            <div class="container row">
+                <ul class="nav  col-xs-12">
+                    <li role="presentation" class="col-xs-1">
+                        <a href="#"><img class="logo" src="assets/images/comida-mexicana.jpeg"></a>
+                    </li>
+                    <li role="presentation" class="col-xs-5 col-xs-offset-3">
+                        <a href="#">
+                            <h4>Garnachas MX</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="row seccion">
+        <div class="container text-center">
+            <div id="map"></div>
+        </div>
+    </section>
+
+
+    <section class="row barraBuscar">
+        <form class="form-inline container">
+            <div class="form-group">
+                <div class="input-group col-xs-12">
+                    <div class="input-group-addon glyphicon glyphicon-search botonBuscar"></div>
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Busca tu garnacha">
+                    <div class="input-group-addon botonBuscar"></div>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+    <section class="row lista">
+        <div class="container text-center">
+           <h1>Lugares para Garnachear</h1>
+           <div id="tabla">
+               <table class="row table-hover">
+                   <tr class="col-xs-12">
+                       <td class="col-xs-2">Nombre</td>
+                       <td class="col-xs-8">Dirección</td>
+                       <td class="col-xs-2">Ubicación</td>
+                   </tr>
+                   <tr class="col-xs-12">
+                       <td class="col-xs-2">Doña Garnacha</td>
+                       <td class="col-xs-8">Aldama 37, Los Reyes Acaquilpan Centro, La Paz, Los Reyes, 56400 Los Reyes Acaquilpan (La Paz), MEX</td>
+                       <td class="col-xs-2">19.3414384,99.0052152</td>
+                   </tr>
+                   <tr class="col-xs-12">
+                       <td class="col-xs-2">La Rellenita de Chicharron</td>
+                       <td class="col-xs-8">Av. de las Torres, Ixtlahuacan, 09690 Ciudad de México, CDMX</td>
+                       <td class="col-xs-2">19.3414384,-99.0052152</td>
+                   </tr>
+                   <tr class="col-xs-12">
+                       <td class="col-xs-2">Taquitos Esperanzadores</td>
+                       <td class="col-xs-8">Joselito Huerta 5911, San Miguel Teotongo, 09630 Ciudad de México, CDMX</td>
+                       <td class="col-xs-2">19.3414384,-99.0052152</td>
+                   </tr>
+               </table>               
+           </div>
+        </div>
+    </section>
+
+    <!--Conexión con APPI de Google Maps-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1NHCVFdhMVsgIZVsEY6rWOKmm0vr4-kY&callback=initMap"></script>
+    <!--Conexión con librería jQuery-->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <!--Conexión con funcionalidad jQuery propia-->
+    <script src="assets/js/mapa.js"></script>
+    <script src="assets/js/listaLugares.js"></script>
+</body>
+
+</html>
